@@ -1,0 +1,28 @@
+問1
+   Switch3
+
+理由
+プライオリティが小さいため
+
+問2
+   Switch1
+         F0/1 BP
+         F0/2 RP
+   Switch2
+         F0/1 DP
+         F0/2 RP
+   Switch3
+         E0/1 DP
+         E0/2 DP
+   Switch4
+         E0/1 DP
+         E0/2 RP
+
+理由
+Switch3がルートブリッジのため、Switch1ではF0/2がコスト100でRP
+Switch2はF0/1が200、F0/2が119のためF0/2がRP、Switch4はE0/2が
+コスト19でRP
+次にSwitch3はルートブリッジのため双ポート共DP、またRPの対向
+ポートのためSwitch4のE0/1がDP、またSwitch1,2間には役割が振られて
+いないため、ブリッジIDの数字が小さいSwitch2のF0/1がDP
+最後に役割の割り振られていないSwitch1のF0/1がBPになる。
